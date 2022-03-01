@@ -37,7 +37,7 @@ export default {
   data() {
     return {
       footer: "Github repo",
-      footer_link: "https://cennz.net/",
+      footer_link: "https://github.com/Amy-Centrality/Ethereum-to-CENNZnet-DApp-Migraton-demo",
     };
   },
   methods: {
