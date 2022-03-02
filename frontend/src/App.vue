@@ -3,11 +3,12 @@
     <div class="container mx-auto">
       <div class="header-container">
         <p class="header gradient-text">⚔️ Metaverse Slayer ⚔️</p>
-        <p class="sub-text">Team up to protect the Metaverse!</p>
+        <p class="sub-text">A simple NFT game</p>
+        
         <div class="connect-wallet-container" v-if="!account">
           <img
-            src="https://64.media.tumblr.com/tumblr_mbia5vdmRd1r1mkubo1_500.gifv"
-            alt="Monty Python Gif"
+            src="https://media.giphy.com/media/kvw1N5nbmqDfEJucaE/giphy.gif"
+            alt="CENNZnet sheep Gif"
           />
           <button class="cta-button connect-wallet-button" @click="connect">
             Connect Metamask To Get Started
@@ -37,7 +38,7 @@ export default {
   data() {
     return {
       footer: "Github repo",
-      footer_link: "https://github.com/Amy-Centrality/Ethereum-to-CENNZnet-DApp-Migraton-demo",
+      footer_link: "https://github.com/cennznet/Ethereum-to-CENNZnet-migraton-demo",
     };
   },
   methods: {

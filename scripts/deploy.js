@@ -1,12 +1,8 @@
 const main = async () => {
   const gameContractFactory = await hre.ethers.getContractFactory("MyEpicGame");
   const gameContract = await gameContractFactory.deploy(
-    ["Leo", "Aang", "Pikachu"],
-    [
-      "https://i.imgur.com/pKd5Sdk.png",
-      "https://i.imgur.com/xVu4vFL.png",
-      "https://i.imgur.com/u7T87A6.png",
-    ],
+    ["Black panther", "BB8", "Spiderman"],
+    ["https://media.giphy.com/media/l4FGvSfevfrAqJiQE/giphy.gif","https://media.giphy.com/media/l4KhSX2kUj7rswDQI/giphy.gif","https://media.giphy.com/media/BWD3CtcudWL28/giphy.gif"],
     [100, 200, 300],
     [100, 50, 25],
     "Elon Musk",
