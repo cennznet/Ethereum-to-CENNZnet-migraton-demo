@@ -24,8 +24,8 @@ export default new Vuex.Store({
     characters: [],
     boss: null,
     attackState: null,
-    // contract_address: "0x279ea0C0927A74d38412bEF2A17E1CCe9F909129", // Ethereum contract address
-    contract_address: "0x53b3131532Db24B92225af8a2ce1cBeC6323A297", // CENNZnet contract address
+    contract_address: "0x279ea0C0927A74d38412bEF2A17E1CCe9F909129", // Ethereum Rinkeby contract address on 
+    // contract_address: "0x53b3131532Db24B92225af8a2ce1cBeC6323A297", // CENNZnet contract address
   },
   getters: {
     account: (state) => state.account,
