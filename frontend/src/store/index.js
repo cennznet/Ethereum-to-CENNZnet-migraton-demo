@@ -24,7 +24,8 @@ export default new Vuex.Store({
     characters: [],
     boss: null,
     attackState: null,
-    contract_address: "0x279ea0C0927A74d38412bEF2A17E1CCe9F909129", // Ethereum contract address
+    // contract_address: "0x279ea0C0927A74d38412bEF2A17E1CCe9F909129", // Ethereum contract address
+    contract_address: "0x53b3131532Db24B92225af8a2ce1cBeC6323A297", // CENNZnet contract address
   },
   getters: {
     account: (state) => state.account,
@@ -77,17 +78,24 @@ export default new Vuex.Store({
         commit("setError", "Account request refused.");
       }
     },
-    async checkNetwork({ commit, dispatch }) {
-      let chainId = await ethereum.request({ method: "eth_chainId" });
-      const rinkebyChainId = "0x4";
-      if (chainId !== rinkebyChainId) {
-        if (!(await dispatch("switchNetwork"))) {
-          commit(
-            "setError",
-            "You are not connected to the Rinkeby Test Network!"
-          );
-        }
-      }
+    async checkNetwork() {
+      // Connect to Web3 injected network
+      const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
+      // Prompt user for account connections
+      await provider.send("eth_requestAccounts", []);
+      const signer = provider.getSigner();
+      console.log("Account:", await signer.getAddress());
+
+      // let chainId = await ethereum.request({ method: "eth_chainId" });
+      // const rinkebyChainId = "0x4";
+      // if (chainId !== rinkebyChainId) {
+      //   if (!(await dispatch("switchNetwork"))) {
+      //     commit(
+      //       "setError",
+      //       "You are not connected to the Rinkeby Test Network!"
+      //     );
+      //   }
+      // }
     },
     async switchNetwork() {
       try {
