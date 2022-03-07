@@ -1,5 +1,10 @@
 # Ethereum to CENNZnet migraton demo
 
+[Live demo](https://ethereum-to-cennz-net-migraton-demo.vercel.app/)
+Please connect MetaMask to Rinkeby to use the demo in Ethereum (default)!
+
+To run the CENNZnet contract, you can connect the frontend to the CENNZnet backend by modifying the `contract_address` in /frontend/src/store/index.js
+
 This project is for demonstrating migrating an Ethereum app to CENNZnet.
 
 This is a simple game that uses smart contracts as the backend with a VueJS frontend. It allows the user to mint an NFT for their chosen character and create a transaction to attack the boss. This project adapted from [this Solidity tutorial](https://betterprogramming.pub/create-a-blockchain-game-with-solidity-web3-and-vue-js-c75eed4b49a6).
