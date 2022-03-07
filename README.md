@@ -1,6 +1,9 @@
 # Ethereum to CENNZnet migraton demo
 
+This demo connects to the network thta MetaMask is connected to.
+
 [Live demo](https://ethereum-to-cennz-net-migraton-demo.vercel.app/)
+
 Please connect MetaMask to Rinkeby to use the demo in Ethereum (default)!
 
 To run the CENNZnet contract, you can connect the frontend to the CENNZnet backend by modifying the `contract_address` in /frontend/src/store/index.js
